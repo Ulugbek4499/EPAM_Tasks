@@ -15,9 +15,11 @@ namespace LINQ_With_C_
                 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
             };
 
-            IEnumerable<int> QuerySyntax = from obj in integerList //Data Source
+           var QuerySyntax = from obj in integerList //Data Source
                               where obj > 5 //Condition
-                              select obj; //Selection
+                              select new { name=obj,
+                                           value =obj
+                                         } ; //Selection
 
             List<int> MethodSyntax = integerList.Where(obj => obj > 5).ToList();
 
