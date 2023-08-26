@@ -1,10 +1,13 @@
-﻿namespace EPAM_Tasks
+﻿using LINQ_With_C_;
+
+namespace EPAM_Tasks
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+
+            LINQ_Example.StartUp();
         }
     }
 }
