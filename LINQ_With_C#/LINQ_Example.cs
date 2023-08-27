@@ -15,6 +15,16 @@ namespace LINQ_With_C_
                 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
             };
 
+            List<int> intList = new List<int>()
+            {
+                100,200,300,400,500,600,700,800,900,1000
+            };
+
+            var mixed = from a in integerList
+                        from b in intList
+                        select a + b;
+            
+
            var QuerySyntax = from obj in integerList //Data Source
                               where obj > 5 //Condition
                               select new { name=obj,
@@ -27,7 +37,7 @@ namespace LINQ_With_C_
                                 where obj > 5
                                 select obj).Sum();
 
-            foreach (var item in QuerySyntax)
+            foreach (var item in mixed)
             {
                 Console.Write(item + " ");
             }
