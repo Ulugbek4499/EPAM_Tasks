@@ -43,6 +43,11 @@ namespace LINQ_With_C_
                          .ThenBy(a => a.LastName)
                          .OrderBy(a => a.FirstName);
 
+            var QS= from std in Student.GetAllStudents()
+                    orderby std.FirstName
+                    orderby std.LastName
+                    select std;
+
         }
 
  
