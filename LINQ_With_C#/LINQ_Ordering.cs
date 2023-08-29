@@ -8,12 +8,17 @@ namespace LINQ_With_C_
 {
     public class LINQ_Ordering
     {
-        //  OrderBy
-        //  OrderByDescending
-        //  ThenBy
-        //  ThenByDescending
-        //  Reverse
+        //  OrderBy             --> sort by order
+        //  OrderByDescending   --> sort by descending
+        //  ThenBy              --> 
+        //  ThenByDescending    --> 
+        //  Reverse             --> 
         public static void StartUp()
+        {
+
+        }
+
+        public static void OrderByStart()
         {
 
         }
