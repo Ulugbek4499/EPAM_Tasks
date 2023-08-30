@@ -48,9 +48,13 @@ namespace LINQ_With_C_
                     orderby std.LastName
                     select std;
 
-        }
+            var MSd = Student.GetAllStudents()
+                     .OrderBy(x => x.Branch)
+                     .ThenByDescending(y => y.FirstName)
+                     .ThenBy(z => z.LastName)
+                     .ToList();
 
- 
+        }
     }
 
     public class Student
