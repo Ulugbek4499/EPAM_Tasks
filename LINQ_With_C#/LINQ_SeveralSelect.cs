@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LINQ_With_C_
 {
-    public class SeveralSelect
+    public class LINQ_SeveralSelect
     {
         public static void StartUp()
         {

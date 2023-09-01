@@ -1,4 +1,5 @@
 ﻿using LINQ_With_C_;
+using MemoryManagement;
 
 namespace EPAM_Tasks
 {
@@ -7,7 +8,9 @@ namespace EPAM_Tasks
         static void Main(string[] args)
         {
 
-            LINQ_Example.StartUp();
+            //LINQ_Example.StartUp();
+
+            GarbageCollections.StartUp();
         }
     }
 }

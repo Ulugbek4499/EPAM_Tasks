@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LINQ_With_C#\LINQ_With_C#.csproj" />
+    <ProjectReference Include="..\MemoryManagement\MemoryManagement.csproj" />
   </ItemGroup>
 
 </Project>
