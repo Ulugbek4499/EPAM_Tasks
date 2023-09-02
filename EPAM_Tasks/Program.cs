@@ -7,10 +7,17 @@ namespace EPAM_Tasks
     {
         static void Main(string[] args)
         {
+            //          ***Memory MANAGEMENT***
+            //GarbageCollections.StartUp();
+            //GarbageCollection_WithoutStatic.StartUp();
+            //ResurrectingObject_Start.StartUp();
+            GC_Task3.StartUp();
+
 
             //LINQ_Example.StartUp();
 
-            GarbageCollections.StartUp();
+
+
         }
     }
 }
