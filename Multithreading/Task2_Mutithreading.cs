@@ -29,10 +29,8 @@ namespace Multithreading
             Console.Write("Enter the maximum time a reader spends in the library (T2 in milliseconds): ");
             int T2 = int.Parse(Console.ReadLine());
 
-            // Use a semaphore to limit the number of readers in the library
             SemaphoreSlim semaphore = new SemaphoreSlim(N, M);
 
-            // List to store tasks for readers
             List<Task> readerTasks = new List<Task>();
 
             Random random = new Random();
@@ -41,20 +39,19 @@ namespace Multithreading
             {
                 int readerNumber = i + 1;
 
-                // Simulate random time spent in the library
                 int randomTime = random.Next(T1, T2);
 
                 Task readerTask = Task.Run(async () =>
                 {
-                    await semaphore.WaitAsync(); // Wait for entry to the library
+                    await semaphore.WaitAsync(); 
 
                     Console.WriteLine($"Reader {readerNumber} enters the library.");
 
-                    Thread.Sleep(randomTime); // Simulate reading time
+                    Thread.Sleep(randomTime); 
 
                     Console.WriteLine($"Reader {readerNumber} exits the library after {randomTime} milliseconds.");
 
-                    semaphore.Release(); // Release the semaphore when exiting the library
+                    semaphore.Release();
                 });
 
                 readerTasks.Add(readerTask);
