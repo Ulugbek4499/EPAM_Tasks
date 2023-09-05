@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\LINQ_With_C#\LINQ_With_C#.csproj" />
     <ProjectReference Include="..\MemoryManagement\MemoryManagement.csproj" />
+    <ProjectReference Include="..\Multithreading\Multithreading.csproj" />
   </ItemGroup>
 
 </Project>

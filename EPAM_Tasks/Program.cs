@@ -1,5 +1,6 @@
 ﻿using LINQ_With_C_;
 using MemoryManagement;
+using Multithreading;
 
 namespace EPAM_Tasks
 {
@@ -11,8 +12,10 @@ namespace EPAM_Tasks
             //GarbageCollections.StartUp();
             //GarbageCollection_WithoutStatic.StartUp();
             //ResurrectingObject_Start.StartUp();
-            GC_Task3.StartUp();
-
+            //GC_Task3.StartUp();
+            //Multithreading_Example.StartUp();
+            
+            Task2_Mutithreading.StartUp();
 
             //LINQ_Example.StartUp();
 
