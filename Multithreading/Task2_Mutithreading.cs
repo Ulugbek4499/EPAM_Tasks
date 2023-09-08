@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Multithreading
 {
-    public class Task2_Mutithreading
+    public class Task2_Multithreading
     {
-
-        public static void StartUp()
+        public static async Task StartUp()
         {
-            MultithreadingStart();
+            await MultithreadingStart();
+
+          
         }
 
         public static async Task MultithreadingStart()
@@ -19,7 +20,6 @@ namespace Multithreading
             Console.Write("Enter the maximum number of readers allowed in the library (N): ");
             int N = int.Parse(Console.ReadLine());
 
-            
             Console.Write("Enter the number of readers arriving (M): ");
             int M = int.Parse(Console.ReadLine());
 
@@ -29,7 +29,7 @@ namespace Multithreading
             Console.Write("Enter the maximum time a reader spends in the library (T2 in milliseconds): ");
             int T2 = int.Parse(Console.ReadLine());
 
-            SemaphoreSlim semaphore = new SemaphoreSlim(N, M);
+            SemaphoreSlim semaphore = new SemaphoreSlim(N, N); // Use N as the maximum count for the semaphore
 
             List<Task> readerTasks = new List<Task>();
 
@@ -43,13 +43,19 @@ namespace Multithreading
 
                 Task readerTask = Task.Run(async () =>
                 {
-                    await semaphore.WaitAsync(); 
+                    await semaphore.WaitAsync();
 
                     Console.WriteLine($"Reader {readerNumber} enters the library.");
 
-                    Thread.Sleep(randomTime); 
+                    // Record entry time
+                    DateTime entryTime = DateTime.Now;
 
-                    Console.WriteLine($"Reader {readerNumber} exits the library after {randomTime} milliseconds.");
+                    await Task.Delay(randomTime); // Use Task.Delay instead of Thread.Sleep
+
+                    // Calculate time spent in the library
+                    TimeSpan timeSpent = DateTime.Now - entryTime;
+
+                    Console.WriteLine($"Reader {readerNumber} exits the library after {timeSpent.TotalMilliseconds} milliseconds.");
 
                     semaphore.Release();
                 });

@@ -4,7 +4,7 @@ using Multithreading;
 
 namespace EPAM_Tasks
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -14,12 +14,13 @@ namespace EPAM_Tasks
             //ResurrectingObject_Start.StartUp();
             //GC_Task3.StartUp();
             //Multithreading_Example.StartUp();
-            
-            Task2_Mutithreading.StartUp();
+
+            Task2_Multithreading.StartUp();
 
             //LINQ_Example.StartUp();
 
-
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
 
         }
     }

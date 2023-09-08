@@ -12,8 +12,6 @@ namespace MemoryManagement
         {
             EndOfProgramGarbageCollectible obj = new EndOfProgramGarbageCollectible();
 
-
-            //obj = null;
             GC.Collect();
           
             Console.WriteLine("End of program");
@@ -26,7 +24,7 @@ namespace MemoryManagement
     {
         public EndOfProgramGarbageCollectible()
         {
-            Console.WriteLine("EndOfGarbageCollection Object Created");
+            Console.WriteLine("End Of Garbage Collection Object Created");
         }
 
         ~EndOfProgramGarbageCollectible()
