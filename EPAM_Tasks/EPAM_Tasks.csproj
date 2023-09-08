@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AsynchronousProgramming\AsynchronousProgramming.csproj" />
     <ProjectReference Include="..\LINQ_With_C#\LINQ_With_C#.csproj" />
     <ProjectReference Include="..\MemoryManagement\MemoryManagement.csproj" />
     <ProjectReference Include="..\Multithreading\Multithreading.csproj" />

@@ -10,13 +10,11 @@ namespace AsynchronousProgramming
     {
         public static void SartUpAsync()
         {
-
             TimeConsumingWorkAsync();
 
             TimeConsumingWorkWithPLINQ();
 
             TimeConsumingWithForEach();
-
         }
 
         public static async Task TimeConsumingWorkAsync()
@@ -34,7 +32,7 @@ namespace AsynchronousProgramming
 
         public static void TimeConsumingWorkWithPLINQ()
         {
-            Console.WriteLine("Starting time-consuming tasks with PLINQ...");
+            Console.WriteLine("Starting with PLINQ...");
 
             var numbers = Enumerable.Range(1, 10);
 
@@ -42,12 +40,12 @@ namespace AsynchronousProgramming
                 .Select(num => TimeConsumingWork(num))
                 .ToList();
 
-            Console.WriteLine("All PLINQ tasks are finished.");
+            Console.WriteLine("PLINQ is finished.");
         }
 
         public static void TimeConsumingWithForEach()
         {
-            Console.WriteLine("Starting time-consuming tasks with Parallel.ForEach...");
+            Console.WriteLine("Starting Parallel.ForEach...");
 
             var numbers = Enumerable.Range(1, 10);
 
@@ -58,7 +56,7 @@ namespace AsynchronousProgramming
                 parallelResult[num - 1] = TimeConsumingWork(num);
             });
 
-            Console.WriteLine("All Parallel.ForEach tasks are finished.");
+            Console.WriteLine("Parallel.ForEach is finished.");
         }
 
         public static int TimeConsumingWork(int a)
