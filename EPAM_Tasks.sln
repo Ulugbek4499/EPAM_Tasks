@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryManagement", "MemoryM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multithreading", "Multithreading\Multithreading.csproj", "{19D8D733-60A6-44FE-9886-61B979E8F7AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousProgramming", "AsynchronousProgramming\AsynchronousProgramming.csproj", "{76A9C384-07AF-4BB5-A077-CB191498126A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsynchronousProgramming", "AsynchronousProgramming\AsynchronousProgramming.csproj", "{76A9C384-07AF-4BB5-A077-CB191498126A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "EntityFramework\EntityFramework.csproj", "{DC1A2914-38F7-4F75-B197-F372254CB5F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{76A9C384-07AF-4BB5-A077-CB191498126A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76A9C384-07AF-4BB5-A077-CB191498126A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76A9C384-07AF-4BB5-A077-CB191498126A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC1A2914-38F7-4F75-B197-F372254CB5F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1A2914-38F7-4F75-B197-F372254CB5F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC1A2914-38F7-4F75-B197-F372254CB5F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC1A2914-38F7-4F75-B197-F372254CB5F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

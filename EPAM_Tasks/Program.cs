@@ -22,7 +22,8 @@ namespace EPAM_Tasks
 
 
             //          *** Asynchronous Programming ***
-            AsynchronousPR.MainStart();
+            //AsynchronousPR.MainStart();
+            TaskVsAwait.StartUp();
 
 
             //          *** LINQ ***
@@ -32,7 +33,7 @@ namespace EPAM_Tasks
 
 
             Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }
